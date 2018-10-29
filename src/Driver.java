@@ -22,6 +22,8 @@ public class Driver {
         Scanner in = new Scanner(System.in);
         String menuCommand = in.nextLine();
 
+        ContactList contactList = new ContactList();
+        int id = 0;
         do {
             // Task2
             if (menuCommand.equals("quit")) {
@@ -40,28 +42,16 @@ public class Driver {
                 System.out.println("Enter your email");
                 String emailInput = in.nextLine();
                 String email = inputCollector.inputForPrompt(emailInput);
-
-                Contact contact = new Contact(user, email);
-                ContactList contactList = new ContactList();
+                Contact contact = new Contact(id, user, email);
                 contactList.addContact(contact);
 
                 contactList.printList();
-
-                System.out.println("If you done, Take a finish");
-                menuCommand = in.nextLine();
-
-                if (menuCommand.equals("finish")) {
-                    System.exit(0);
-                } else {
-                    continue;
-                }
 
             }
 
             // Task 4
             if (menuCommand.equals("list")) {
                 System.out.println("list - List all contacts");
-                ContactList contactList = new ContactList();
                 contactList.printList();
             }
 
@@ -74,6 +64,8 @@ public class Driver {
             System.out.printf("> ");
 
             menuCommand = in.nextLine();
+
+            id++;
 
         } while(!menuCommand.equals("quit"));
 
