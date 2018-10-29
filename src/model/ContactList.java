@@ -18,7 +18,7 @@ public class ContactList {
 
     public void printList() {
         for(Contact contact : contactList) {
-            System.out.println(contact.getUserName() + " " + contact.getEmail());
+            System.out.println(contact.getId() + " " + contact.getUserName() + " " + contact.getEmail());
         }
     }
 }
