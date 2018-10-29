@@ -16,9 +16,16 @@ public class ContactList {
         contactList.add(contact);
     }
 
+
     public void printList() {
         for(Contact contact : contactList) {
-            System.out.println(contact.getId() + " " + contact.getUserName() + " " + contact.getEmail());
+            System.out.println(contact.getId());
+            System.out.println("-----------------------------");
+            System.out.println("Name: " + contact.getUserName());
+            System.out.println("Email: " + contact.getEmail());
+            System.out.println("Cellphone: " + contact.getCellphone());
+            System.out.println("Address: " + contact.getAddress());
+            System.out.println("                            ");
         }
     }
 }

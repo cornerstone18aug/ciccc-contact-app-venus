@@ -7,13 +7,17 @@ public class Contact {
     private int id;
     private String userName;
     private String email;
+    private String cellphone;
+    private String address;
 
     public Contact(){}
 
-    public Contact(int id, String userName, String email) {
+    public Contact(int id, String userName, String email, String cellphone, String address) {
         this.id = id;
         this.userName = userName;
         this.email = email;
+        this.cellphone = cellphone;
+        this.address = address;
     }
 
     public String getUserName() {
@@ -33,10 +37,26 @@ public class Contact {
     }
 
     public int getId() {
-        return id;
+        return id+1;
     }
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getCellphone() {
+        return cellphone;
+    }
+
+    public void setCellphone(String cellphone) {
+        this.cellphone = cellphone;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 }
