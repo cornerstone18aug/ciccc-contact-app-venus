@@ -4,12 +4,14 @@ package model;
  * Created by katayama on 2018/10/26.
  */
 public class Contact {
+    private int id;
     private String userName;
     private String email;
 
     public Contact(){}
 
-    public Contact(String userName, String email) {
+    public Contact(int id, String userName, String email) {
+        this.id = id;
         this.userName = userName;
         this.email = email;
     }
@@ -28,5 +30,13 @@ public class Contact {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
